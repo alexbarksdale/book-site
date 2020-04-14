@@ -22,7 +22,7 @@ class Book(models.Model):
     title = models.CharField(max_length=50)
     num_pages = models.IntegerField(default=0)
     date_published = models.DateField(blank=True, null=True)
-    book_author = models.ForeignKey(
+    author = models.ForeignKey(
         Author, on_delete=models.CASCADE, null=True)
     tags = models.ManyToManyField(Tag)
 
